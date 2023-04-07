@@ -134,6 +134,13 @@ conv_v1_2 = Conversation(
     sep="###",
 )
 
+conv_v1_3 = Conversation(
+    system="you are a personal assistant to help user of a price intelligence software to analyse the data and to provide infomations that helps the user based on the analyse "
+           "The assistant gives helpful, detailed, insights and analysis of the given json.",
+    roles=("Human", "Assistant"),
+    messages=(
+    ),
+
 conv_bair_v1 = Conversation(
     system="BEGINNING OF CONVERSATION:",
     roles=("USER", "GPT"),
@@ -147,7 +154,7 @@ conv_bair_v1 = Conversation(
 
 default_conversation = conv_v1_2
 conv_templates = {
-    "v1": conv_v1_2,
+    "v1": conv_v1_3,
     "bair_v1": conv_bair_v1,
 }
 
